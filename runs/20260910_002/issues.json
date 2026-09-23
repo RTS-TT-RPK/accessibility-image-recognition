@@ -1,0 +1,79 @@
+{
+ "run_id": "20260910_002",
+ "issues": [
+  {
+   "issue_id": "ISS-SUM-R002-",
+   "run_id": "20260910_002",
+   "type": "COMPONENT_SUM_OVER_100",
+   "severity": "severe",
+   "image": "IMG_A",
+   "sheet": "库存日报",
+   "target_ids": [
+    "R002"
+   ],
+   "object": "2号库/甲醇",
+   "field": "",
+   "description": "计量项合计 100.40%，超过上限 100.00%（含按条件计入的类别）",
+   "candidates": [
+    "100.40%"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R003-含水率",
+   "run_id": "20260910_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "IMG_C",
+   "sheet": "来料分析",
+   "target_ids": [
+    "R003"
+   ],
+   "object": "B002/桶01",
+   "field": "含水率",
+   "description": "看不清或无法确定：含水率",
+   "candidates": [
+    "0.05%",
+    "0.5%"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-MISS-R004-物料",
+   "run_id": "20260910_002",
+   "type": "MISSING_REQUIRED_FIELD",
+   "severity": "warn",
+   "image": "IMG_C",
+   "sheet": "来料分析",
+   "target_ids": [
+    "R004"
+   ],
+   "object": "B002/桶02",
+   "field": "物料",
+   "description": "必填字段为空：物料",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-DUP-IMG_B",
+   "run_id": "20260910_002",
+   "type": "DUPLICATE",
+   "severity": "info",
+   "image": "IMG_B",
+   "sheet": "",
+   "target_ids": [
+    "IMG_B"
+   ],
+   "object": "",
+   "field": "",
+   "description": "与 IMG_A 内容完全相同（同一张图重复提交）；本组共 2 张：IMG_A、IMG_B",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  }
+ ],
+ "resolved_count": 0
+}

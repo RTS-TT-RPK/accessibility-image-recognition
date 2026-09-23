@@ -1,0 +1,45 @@
+{
+ "run_id": "20260910_001",
+ "issues": [
+  {
+   "issue_id": "ISS-SUM-R002-",
+   "run_id": "20260910_001",
+   "type": "COMPONENT_SUM_OVER_100",
+   "severity": "severe",
+   "image": "IMG_0001",
+   "sheet": "来料分析",
+   "target_ids": [
+    "R002"
+   ],
+   "object": "A001/桶02",
+   "field": "",
+   "description": "计量项合计 100.30%，超过上限 100.00%（不含按条件计入的类别）",
+   "candidates": [
+    "100.30%"
+   ],
+   "machine_status": "resolved",
+   "human_decision": "DMF=0"
+  },
+  {
+   "issue_id": "ISS-OCR-R003-乙酸",
+   "run_id": "20260910_001",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "IMG_0002",
+   "sheet": "来料分析",
+   "target_ids": [
+    "R003"
+   ],
+   "object": "A001/桶03",
+   "field": "乙酸",
+   "description": "看不清或无法确定：乙酸",
+   "candidates": [
+    "0.5%",
+    "5%"
+   ],
+   "machine_status": "resolved",
+   "human_decision": "0.5%"
+  }
+ ],
+ "resolved_count": 2
+}

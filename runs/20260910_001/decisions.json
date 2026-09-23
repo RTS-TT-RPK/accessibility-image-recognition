@@ -1,0 +1,25 @@
+{
+ "run_id": "20260910_001",
+ "issue_decisions": [
+  {
+   "issue_id": "ISS-SUM-R002-",
+   "decision": "DMF=0",
+   "note": "对照原图：DMF 那格实际是 0.0%"
+  },
+  {
+   "issue_id": "ISS-OCR-R003-乙酸",
+   "decision": "0.5%",
+   "note": "对照原图：乙酸 0.5%"
+  }
+ ],
+ "archive_decisions": [
+  {
+   "image_id": "IMG_0001",
+   "confirmed": true
+  },
+  {
+   "image_id": "IMG_0002",
+   "confirmed": true
+  }
+ ]
+}

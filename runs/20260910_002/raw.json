@@ -1,0 +1,158 @@
+{
+ "run_id": "20260910_002",
+ "created": "2026-09-10 21:00:00",
+ "source_type": "inventory",
+ "images": [
+  {
+   "image_id": "IMG_A",
+   "file": "runs/20260910_002/source/IMG_A.jpg",
+   "sha256": "00a06ae5ab98ded2fb0e62ae491d5626e8fdd1d3adad24f5e9605a1dbdcd1a10",
+   "sheet_label": "库存日报",
+   "date_text": "2026-09-10",
+   "suggested_name": "2026-09-10_库存日报_第1张.jpg"
+  },
+  {
+   "image_id": "IMG_B",
+   "file": "runs/20260910_002/source/IMG_B.jpg",
+   "sha256": "00a06ae5ab98ded2fb0e62ae491d5626e8fdd1d3adad24f5e9605a1dbdcd1a10",
+   "sheet_label": "库存日报",
+   "date_text": "2026-09-10",
+   "suggested_name": "2026-09-10_库存日报_第2张.jpg"
+  },
+  {
+   "image_id": "IMG_C",
+   "file": "runs/20260910_002/source/IMG_C.jpg",
+   "sha256": "e2cf3f8aad696fcd46c06c5b05f9d1df75c78e3eb974f328c406236d11e774d7",
+   "sheet_label": "来料分析",
+   "date_text": "2026-09-10",
+   "suggested_name": "2026-09-10_来料分析_批B002_第1张.jpg"
+  }
+ ],
+ "rows": [
+  {
+   "row_id": "R001",
+   "image_id": "IMG_A",
+   "sheet": "库存日报",
+   "row_role": "data",
+   "object_label": "1号库/IPAC",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "1号库",
+    "物料": "IPAC"
+   },
+   "components": [
+    {
+     "name": "IPAC",
+     "raw_value": "99.5%",
+     "value": "0.995",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    }
+   ],
+   "uncertain": []
+  },
+  {
+   "row_id": "R002",
+   "image_id": "IMG_A",
+   "sheet": "库存日报",
+   "row_role": "data",
+   "object_label": "2号库/甲醇",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "2号库",
+    "物料": "甲醇"
+   },
+   "components": [
+    {
+     "name": "甲醇",
+     "raw_value": "99.9%",
+     "value": "0.999",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    },
+    {
+     "name": "杂",
+     "raw_value": "0.5%",
+     "value": "0.005",
+     "unit": "%"
+    }
+   ],
+   "uncertain": []
+  },
+  {
+   "row_id": "R003",
+   "image_id": "IMG_C",
+   "sheet": "来料分析",
+   "row_role": "data",
+   "object_label": "B002/桶01",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "北罐区",
+    "物料": "IPAC",
+    "批次": "B002",
+    "桶号": "01"
+   },
+   "components": [
+    {
+     "name": "IPAC",
+     "raw_value": "89.6%",
+     "value": "0.896",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    }
+   ],
+   "uncertain": [
+    {
+     "field": "含水率",
+     "candidates": [
+      "0.05%",
+      "0.5%"
+     ],
+     "note": "同类词未注册"
+    }
+   ]
+  },
+  {
+   "row_id": "R004",
+   "image_id": "IMG_C",
+   "sheet": "来料分析",
+   "row_role": "data",
+   "object_label": "B002/桶02",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "北罐区",
+    "批次": "B002",
+    "桶号": "02"
+   },
+   "components": [],
+   "uncertain": []
+  }
+ ]
+}

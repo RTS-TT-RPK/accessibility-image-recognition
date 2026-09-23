@@ -1,0 +1,48 @@
+{
+  "_说明": "通用默认版式契约。任何找不到专属 schema 的表型都用这一份。改这个文件即可调整所有表型的默认校验口径，不必改代码。",
+  "_字段说明": {
+    "template": "契约的唯一标识，改了等于换一份契约",
+    "sheet_label": "匹配 raw.json 里每行的 sheet 字段；* 表示兜底通配",
+    "columns": "这一表型有哪些列。type 可取 text/date/number/percent/identifier；required=true 表示该列不能为空",
+    "measurements": "计量项（成分/指标）的校验口径。enabled=false 表示这张表根本没有合计概念",
+    "measurements.categories": "每个词表类别怎么参与合计：never=永不计入；if_present=有值才计入、空白不提示；always=必须计入",
+    "measurements.sum_max": "合计上限（百分数）。超过即报严重问题，无容差",
+    "vocabulary": "同类词的归类表（只写用户拍板过的词）。留空则用内置默认",
+    "fact_keys": "「成分事实」表的输出列 -> 从 raw.json 的哪个字段取；用不到的行留空",
+    "archive": "归档命名规则，null 表示直接采用 raw.json 里模型建议的文件名"
+  },
+
+  "template": "generic_default_v1",
+  "sheet_label": "*",
+  "row_unit": "一行 = 一个业务对象（一条记录）",
+  "columns": [],
+
+  "measurements": {
+    "enabled": true,
+    "unit": "%",
+    "categories": {
+      "water": "never",
+      "misc": "if_present"
+    },
+    "default_category": "always",
+    "sum_max": 100.0
+  },
+
+  "vocabulary": {
+    "water": ["水", "水分", "含水量", "水份", "含水"],
+    "misc": ["杂", "杂质", "杂分", "其他", "残余", "不纯物"]
+  },
+
+  "fact_keys": {
+    "record_date": "日期",
+    "location": "位置",
+    "batch_id": "批次",
+    "container_id": "桶号",
+    "material_name": "物料",
+    "supplier": "厂商"
+  },
+
+  "archive": {
+    "name_pattern": null
+  }
+}

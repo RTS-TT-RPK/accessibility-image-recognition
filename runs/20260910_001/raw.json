@@ -1,0 +1,173 @@
+{
+ "run_id": "20260910_001",
+ "created": "2026-09-10 20:30:00",
+ "source_type": "incoming",
+ "images": [
+  {
+   "image_id": "IMG_0001",
+   "file": "runs/20260910_001/source/IMG_0001.jpg",
+   "sha256": "aaa111",
+   "sheet_label": "来料分析",
+   "date_text": "2026-09-10",
+   "suggested_name": "2026-09-10_来料分析_批A001_第1张.jpg"
+  },
+  {
+   "image_id": "IMG_0002",
+   "file": "runs/20260910_001/source/IMG_0002.jpg",
+   "sha256": "bbb222",
+   "sheet_label": "来料分析",
+   "date_text": "2026-09-10",
+   "suggested_name": "2026-09-10_来料分析_批A001_第2张.jpg"
+  }
+ ],
+ "rows": [
+  {
+   "row_id": "R001",
+   "image_id": "IMG_0001",
+   "sheet": "来料分析",
+   "row_role": "data",
+   "object_label": "A001/桶01",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "北罐区7#",
+    "物料": "IPAC",
+    "批次": "A001",
+    "桶号": "01"
+   },
+   "components": [
+    {
+     "name": "IPAC",
+     "raw_value": "89.6%",
+     "value": "0.896",
+     "unit": "%"
+    },
+    {
+     "name": "DMF",
+     "raw_value": "8%",
+     "value": "0.08",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    },
+    {
+     "name": "杂",
+     "raw_value": "2.3%",
+     "value": "0.023",
+     "unit": "%"
+    }
+   ],
+   "uncertain": []
+  },
+  {
+   "row_id": "R002",
+   "image_id": "IMG_0001",
+   "sheet": "来料分析",
+   "row_role": "data",
+   "object_label": "A001/桶02",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "北罐区7#",
+    "物料": "IPAC",
+    "批次": "A001",
+    "桶号": "02"
+   },
+   "components": [
+    {
+     "name": "IPAC",
+     "raw_value": "99.5%",
+     "value": "0.995",
+     "unit": "%"
+    },
+    {
+     "name": "DMF",
+     "raw_value": "0.8%",
+     "value": "0.008",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    }
+   ],
+   "uncertain": []
+  },
+  {
+   "row_id": "R003",
+   "image_id": "IMG_0002",
+   "sheet": "来料分析",
+   "row_role": "data",
+   "object_label": "A001/桶03",
+   "required_fields": [
+    "物料"
+   ],
+   "fields": {
+    "日期": "2026-09-10",
+    "位置": "北罐区7#",
+    "物料": "IPAC",
+    "批次": "A001",
+    "桶号": "03"
+   },
+   "components": [
+    {
+     "name": "IPAC",
+     "raw_value": "89.4%",
+     "value": "0.894",
+     "unit": "%"
+    },
+    {
+     "name": "DMF",
+     "raw_value": "8%",
+     "value": "0.08",
+     "unit": "%"
+    },
+    {
+     "name": "水",
+     "raw_value": "0.1%",
+     "value": "0.001",
+     "unit": "%"
+    },
+    {
+     "name": "杂",
+     "raw_value": "",
+     "value": "",
+     "unit": "%"
+    }
+   ],
+   "uncertain": [
+    {
+     "field": "乙酸",
+     "candidates": [
+      "0.5%",
+      "5%"
+     ],
+     "note": "字迹不清"
+    }
+   ]
+  },
+  {
+   "row_id": "R004",
+   "image_id": "IMG_0002",
+   "sheet": "来料分析",
+   "row_role": "summary",
+   "object_label": "合计",
+   "fields": {
+    "日期": "2026-09-10",
+    "物料": "合计"
+   },
+   "components": [],
+   "uncertain": []
+  }
+ ]
+}

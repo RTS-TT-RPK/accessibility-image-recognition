@@ -1,0 +1,4 @@
+interface:
+  display_name: "图像数据识别转化"
+  short_description: "单据照片自动识别成 Excel，问题集中审核、原图自动归档"
+  default_prompt: "用 $image-data-recognition 处理今天的单据照片，生成 Excel 并归档原图。"

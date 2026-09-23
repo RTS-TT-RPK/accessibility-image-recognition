@@ -1,0 +1,20 @@
+# 业务数据不进版本库（图、归档、日志）
+inbox/*
+!inbox/README.md
+pending/*
+!pending/README.md
+archive/*
+!archive/README.md
+发布/
+runs/*/source/*.jpg
+runs/*/source/*.jpeg
+runs/*/source/*.png
+__pycache__/
+*.pyc
+~$*.xlsx
+Thumbs.db
+desktop.ini
+
+# 安装脚本生成的技能副本（随时可重新生成，不作为源）
+.dsh/skills/
+.agents/skills/

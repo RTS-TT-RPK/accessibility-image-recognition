@@ -1,0 +1,53 @@
+{
+ "run_id": "20260910_002",
+ "plan": [
+  {
+   "image_id": "IMG_A",
+   "source": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\runs/20260910_002/source/IMG_A.jpg",
+   "original_name": "IMG_A.jpg",
+   "suggested_name": "2026-09-10_库存日报_第1张.jpg",
+   "date_text_raw": "2026-09-10",
+   "date_part": "2026-09-10",
+   "target_dir": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\archive\\2026-09-10",
+   "action": "move",
+   "confirmed": null,
+   "executed": false,
+   "result": "未执行",
+   "target_path": "",
+   "source_ok": true,
+   "blocked_reason": ""
+  },
+  {
+   "image_id": "IMG_B",
+   "source": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\runs/20260910_002/source/IMG_B.jpg",
+   "original_name": "IMG_B.jpg",
+   "suggested_name": "2026-09-10_库存日报_第2张.jpg",
+   "date_text_raw": "2026-09-10",
+   "date_part": "2026-09-10",
+   "target_dir": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\archive\\2026-09-10",
+   "action": "move",
+   "confirmed": null,
+   "executed": false,
+   "result": "未执行",
+   "target_path": "",
+   "source_ok": true,
+   "blocked_reason": ""
+  },
+  {
+   "image_id": "IMG_C",
+   "source": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\runs/20260910_002/source/IMG_C.jpg",
+   "original_name": "IMG_C.jpg",
+   "suggested_name": "2026-09-10_来料分析_批B002_第1张.jpg",
+   "date_text_raw": "2026-09-10",
+   "date_part": "2026-09-10",
+   "target_dir": "C:\\Users\\86173\\Desktop\\图像识别长期工程\\archive\\2026-09-10",
+   "action": "move",
+   "confirmed": null,
+   "executed": false,
+   "result": "未执行",
+   "target_path": "",
+   "source_ok": true,
+   "blocked_reason": ""
+  }
+ ]
+}
