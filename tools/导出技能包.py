@@ -18,18 +18,23 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSION = "V1.6"
+VERSION = "V2.0"
 SKILL_ID = "image-data-recognition"
 
 INCLUDE = [
     "AGENTS.md", "AI自安装说明.md", "validate_export.py", "aliases.json", "FEEDBACK_LOG.md",
     "使用说明.md", "schemas", "tools", "docs", "vendor", "技能源文件",
+    # DSH 专用插件的源文件。不带上的话，换电脑后 tools\dsh_plugin_setup.py 会报"找不到插件源"。
+    "插件源文件",
     # 工作区骨架：这五个业务文件夹本身要在，各带一份说明，
     # 这样新电脑解压出来就是完整工作区（不跑脚本也不缺文件夹）。
     "inbox/README.md", "pending/README.md", "archive/README.md",
     "golden/README.md", "runs/README.md",
 ]
-ALWAYS_SKIP = {".git", "__pycache__", "发布", "runs", "inbox", "pending", "archive", "golden"}
+# node_modules 必须排除：插件目录里那个 @deepseek-ai/dsh-tools 是**指向本机 profile 的 junction**，
+# 打进去既没意义（换电脑就失效），又会跟着链接把宿主的整套依赖复制进包里。
+ALWAYS_SKIP = {".git", "__pycache__", "发布", "runs", "inbox", "pending", "archive",
+               "golden", "node_modules"}
 
 # 这些文件名里带中文全角括号，打包时保持原样即可
 
@@ -114,12 +119,25 @@ def build_zip(with_golden=False):
             "\n"
             "详细说明见 表格识别系统\\使用说明.md\n"
             "  以及 技能文件_手动安装\\%s\\references\\安装部署说明.md（当前安装部署说明）\n"
+            "  命令速查：技能文件_手动安装\\%s\\references\\命令速查.md\n"
+            "\n"
+            "=== DSH 用户：还多一个专用插件（可选）===\n"
+            "  插件源在 表格识别系统\\插件源文件\\dsh-table-image\\。装上之后 DSH 里会多出\n"
+            "  table_image_* 工具（建任务/提交识别/校验/导入审核/落账归档）和一个收图按钮。\n"
+            "  装法（改前会自动备份配置）：\n"
+            "      双击 表格识别系统\\tools\\安装DSH插件（双击）.bat\n"
+            "    或 python tools\\dsh_plugin_setup.py --status   （先看状态）\n"
+            "  装完必须重启 DSH。不装插件也能用，只是纯命令行。\n"
+            "\n"
+            "=== 装完先自检（两条命令，都应全绿）===\n"
+            "  python tools\\回归测试.py      （裁判脚本）\n"
+            "  python tools\\新流程自测.py    （脚本层端到端，临时目录里跑，不碰真实数据）\n"
             "\n"
             "=== 也可以让 AI 自己装 ===\n"
             "  打开 表格识别系统 文件夹，让 AI 读根目录的 AI自安装说明.md，它会自己检查环境、\n"
             "  装依赖、把技能放进自己的技能目录，并跑一遍自检。手动步骤在该文档第 7 节。\n"
             "  只想看环境有没有问题：python tools\\环境自检.py\n"
-            % (VERSION, datetime.date.today().isoformat(), count, SKILL_ID, SKILL_ID)
+            % (VERSION, datetime.date.today().isoformat(), count, SKILL_ID, SKILL_ID, SKILL_ID)
         )
         zf.writestr("表格识别系统/VERSION.txt", version_txt)
 

@@ -1,0 +1,20 @@
+# 表格图片转录（dsh-table-image）—— 组合包（bundle）patch 声明
+#
+# 这个文件让本包成为一个【DSH 组合包】。机制（依据 packages/boot/app-boot/lib/types/profile.d.ts）：
+#   - profile 的 package.json 里 dsh.profile.bundles 列出组合包名（按顺序）
+#   - 每个组合包的 dsh.bundle.patch 指向本文件
+#   - 组合时按 bundles 顺序把各组合包的 patch 依次叠加到空条目表上，
+#     最后再叠加用户自己的 cordis.patch.yml（所以用户层能覆盖这里）
+#
+# 注意：这里的 `id: table-image` 必须与用户 patch 层里覆盖项的 id 一致，
+# 否则左侧栏「插件」页的开关改不到它。
+#
+# config.workspace 是本包工作区定位的【第一优先级】。
+# 换电脑 / 换目录时改这一行即可（另两条出路：环境变量 DSH_TABLE_IMAGE_WORKSPACE、
+# 或与 index.js 同目录的 workspace.txt）。
+
+- insert:
+    - id: table-image
+      name: dsh-table-image
+      config:
+        workspace: 'C:\Users\86173\Desktop\图像识别长期工程'

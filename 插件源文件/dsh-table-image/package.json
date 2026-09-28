@@ -1,0 +1,29 @@
+{
+  "name": "dsh-table-image",
+  "version": "0.1.0",
+  "private": true,
+  "description": "表格图片转录：宿主侧注册 table_image_* 工具（薄壳，全部转调工作区里的 Python 脚本），客户端提供一个按钮 + 状态面板 + 拖拽收图。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.1.1-rc.2 <0.2.0"
+  }
+}
