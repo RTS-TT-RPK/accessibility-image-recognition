@@ -18,3 +18,20 @@ desktop.ini
 # 安装脚本生成的技能副本（随时可重新生成，不作为源）
 .dsh/skills/
 .agents/skills/
+
+# ── 第三方依赖：绝不进本仓库 ──────────────────────────────────────────────
+# 插件目录下的 node_modules 是指向 DSH 安装目录的 junction（软链），
+# 一旦提交就等于把**别人的代码**放进公开仓库 —— 既侵犯版权，也让仓库虚胖。
+# 换机器后由 tools/dsh_plugin_setup.py 重新建链接。
+node_modules/
+
+# ── 密钥与凭据（公开仓库历史删不干净，宁可不跟踪）──────────────────────────
+.env
+.env.*
+*.key
+*.pem
+*.p12
+id_rsa*
+credentials.json
+.vscode/
+*.log

@@ -121,6 +121,47 @@ def copy_skill(dst_dir, workdir):
         f.write(workdir + "\n")
 
 
+def verify(dst_dir, workdir):
+    """装完当场核对一遍：文件在不在、编码对不对、路径通不通。
+
+    这三样任何一样不对，技能在那个工具里就是"装死"状态 —— 表面装好了却用不了，
+    所以宁可现在打印出来，也不要等用户在那个工具里发现技能不见了。
+    返回 (是否通过, 问题列表)。
+    """
+    problems = []
+    skill = os.path.join(dst_dir, "SKILL.md")
+    if not os.path.isfile(skill):
+        problems.append("缺 SKILL.md")
+    else:
+        with open(skill, "rb") as f:
+            head = f.read(3)
+        if head == b"\xef\xbb\xbf":
+            problems.append("SKILL.md 带了 BOM（YAML frontmatter 必须从 --- 开始，否则技能解析不了）")
+        else:
+            with open(skill, "r", encoding="utf-8") as f:
+                text = f.read(400)
+            if not text.lstrip().startswith("---"):
+                problems.append("SKILL.md 开头不是 YAML frontmatter（---）")
+            elif "name:" not in text or "description:" not in text:
+                problems.append("SKILL.md 的 frontmatter 缺 name 或 description")
+
+    ws = os.path.join(dst_dir, "workspace.txt")
+    if not os.path.isfile(ws):
+        problems.append("缺 workspace.txt")
+    else:
+        with open(ws, "rb") as f:
+            has_bom = f.read(3) == b"\xef\xbb\xbf"
+        if not has_bom:
+            problems.append("workspace.txt 没有 BOM（PowerShell 5.1 会按 GBK 读成乱码）")
+        with open(ws, "r", encoding="utf-8-sig") as f:
+            path_in_file = f.read().strip()
+        if not os.path.isdir(path_in_file):
+            problems.append("workspace.txt 里的路径不存在：%s" % path_in_file)
+        elif os.path.normcase(os.path.abspath(path_in_file)) != os.path.normcase(os.path.abspath(workdir)):
+            problems.append("workspace.txt 指向别处：%s" % path_in_file)
+    return (not problems), problems
+
+
 def install(force):
     head("安装「%s」技能" % SKILL_NAME)
     line("工作区：  " + BASE)
@@ -140,7 +181,13 @@ def install(force):
         try:
             copy_skill(dst, BASE)
             ok.append((name, dst, already))
-            line("  [完成] %-12s -> %s" % (name, dst))
+            passed, problems = verify(dst, BASE)
+            if passed:
+                line("  [完成] %-12s -> %s" % (name, dst))
+            else:
+                line("  [完成] %-12s -> %s" % (name, dst))
+                for p in problems:
+                    line("           ⚠ 核对不通过：%s" % p)
         except Exception as e:
             fail.append((name, str(e)))
             line("  [失败] %-12s %s" % (name, e))
@@ -150,7 +197,10 @@ def install(force):
         dst = os.path.join(BASE, cfg, "skills", SKILL_ID)
         try:
             copy_skill(dst, BASE)
+            passed, problems = verify(dst, BASE)
             line("  [完成] %-12s -> %s" % (label, dst))
+            for p in problems:
+                line("           ⚠ 核对不通过：%s" % p)
         except Exception as e:
             line("  [跳过] %-12s %s" % (label, e))
 
@@ -173,6 +223,7 @@ def install(force):
     line("  3. 想确认技能有没有被识别到，问它：你有哪些技能？")
     line()
     line("提示：技能源文件改动后，重新双击运行本脚本即可同步到所有工具。")
+    line("      想再彻底核对一遍环境：python tools\\环境自检.py")
     return 0 if not fail else 1
 
 
