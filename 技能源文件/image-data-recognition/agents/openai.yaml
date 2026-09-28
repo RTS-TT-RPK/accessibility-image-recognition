@@ -1,4 +1,4 @@
 interface:
   display_name: "图像数据识别转化"
-  short_description: "单据照片自动识别成 Excel，问题集中审核、原图自动归档"
-  default_prompt: "用 $image-data-recognition 处理今天的单据照片，生成 Excel 并归档原图。"
+  short_description: "AI 只看图交识别片段，确定性脚本负责编号换算落账，问题集中审核、原图自动归档"
+  default_prompt: "用 $image-data-recognition 处理今天的单据照片：逐张看图交识别片段，脚本会自动编号换算落账，最后把审核表交给我确认。"
