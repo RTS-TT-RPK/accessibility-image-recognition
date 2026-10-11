@@ -1,0 +1,29 @@
+{
+  "_说明": "通用性测试代码基线。受保护层变了 = 通用性不成立。",
+  "protected": {
+    "tools/dsh_plugin_setup.py": "98a7848374ff7658d651fd541bd71b68e778a2fa8d160553eb0bd1aef33e68cc",
+    "tools/任务.py": "f43d20318d0cfe40c99fb037680507aa7eeeb022d13829ad7e2a5a78aa776bf8",
+    "tools/初始化工作区.py": "cf5c2af4d2ff6b2b6a0ec23b7a1f233eccd8cb944b14e10f6dee5fa990a8bfb6",
+    "tools/回归测试.py": "f00d3345d9ee8eed34df4f9b0cd5c6ec0b730e9102ac17ac0f264bfd6f9c2666",
+    "tools/安装技能.py": "ceaf21b8c135a9efd4a9aa09accfae68b4cb8260e60f0c82b8f68fd3e4a1a194",
+    "tools/导入审核.py": "9186faf1cec241195a730dd796a34d5f3fb916426dd119d2d67400b973533067",
+    "tools/导出技能包.py": "6b0a4448bf57c7cdea6905caf06b0655bccf35b40a4d2d4c0a65ebed7b584985",
+    "tools/导出长表.py": "a224e152c73393437b32e6dc1592cf1091b75349e41f48e74f1cae9a5f7a6b9b",
+    "tools/建任务.py": "95707671d90e4758c7c68eabd2115aa09bb7210a2fa7a84475cc6e534fff5985",
+    "tools/提交识别.py": "9dda8d83bae872f1ef82067486bc3ba027046a0454b385fa94d05de94d8007fc",
+    "tools/收尾报告.py": "8ea62aec2d658f65bf4545a27f386401e377e705c7e8230064904faf1b59158d",
+    "tools/收录.py": "122337c27591d1f1f31eb293bad52d28d76e35d9a769997db65c067467b4338c",
+    "tools/新流程自测.py": "4ea35d87b428dace73d021e4f8786940a14074e224ef6dae7fc9ed974ed56204",
+    "tools/注册表型.py": "458e4d05315d2af4a7ca5841c6757f5a564c6b90ec8e7ed3ddb954c8339c22a4",
+    "tools/环境自检.py": "f44b11b14e92dd70855d4e4d1594b39181bde646b25b540a2e3190af56518633",
+    "tools/生成样板.py": "99bda4af0c3bd65ca712af7ad315b28e5e72af2aad6cef2cf26afea1213c44df",
+    "validate_export.py": "850076548d441bb747d9fac6fa4062f246b4917f577d16cfb17b10c62b438b56"
+  },
+  "record": {
+    "aliases.json": "bfc1f7e02d39f32c3025a4e71027312e9365ddb022620f356db3e32f0684b01c",
+    "golden/README.md": "430bd3c97ba28aaedba2938f71609e67f3931c0d01ecfbf048918eaa08bca137",
+    "schemas/_default.json": "41d3b92a1dd8d6892c5ea95a33f016aa3ad6ae300c02ce3b7f76d2a6bd8bf6ac",
+    "schemas/库存日报_v1.json": "2c5a7d383c7a3d366819bd1c605e4d750c94de66504cf8052c0fe6e7771e1079",
+    "schemas/来料分析_v1.json": "255af3115b3a46d0ab01ea88cb5f27dcdf8110626704d4c3cb198b200f82001e"
+  }
+}

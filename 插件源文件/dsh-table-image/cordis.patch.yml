@@ -1,17 +1,27 @@
-# 表格图片转录（dsh-table-image）—— 组合包（bundle）patch 声明
+# dsh-table-image —— 组合包（bundle）挂载声明
 #
-# 这个文件让本包成为一个【DSH 组合包】。机制（依据 packages/boot/app-boot/lib/types/profile.d.ts）：
-#   - profile 的 package.json 里 dsh.profile.bundles 列出组合包名（按顺序）
-#   - 每个组合包的 dsh.bundle.patch 指向本文件
-#   - 组合时按 bundles 顺序把各组合包的 patch 依次叠加到空条目表上，
-#     最后再叠加用户自己的 cordis.patch.yml（所以用户层能覆盖这里）
+# 作用：让本包成为 DSH【组合包】，出现在左侧栏「插件」页里，带官方开关。
 #
-# 注意：这里的 `id: table-image` 必须与用户 patch 层里覆盖项的 id 一致，
-# 否则左侧栏「插件」页的开关改不到它。
+# 机制（依据 packages/boot/app-boot/lib/types/profile.d.ts）：
+#   profile 的 `dsh.profile.bundles` 按顺序列出组合包名 → 每个组合包的
+#   `dsh.bundle.patch` 指向本文件 → 组合时把各组合包的 patch 依次叠加到空条目表上，
+#   最后再叠加用户自己的 cordis.patch.yml。
 #
-# config.workspace 是本包工作区定位的【第一优先级】。
-# 换电脑 / 换目录时改这一行即可（另两条出路：环境变量 DSH_TABLE_IMAGE_WORKSPACE、
-# 或与 index.js 同目录的 workspace.txt）。
+# 解析要求：DSH 用 resolveBundleDir() → createRequire(anchor).resolve.paths() 找包。
+# 已验证本机 profile 锚点的搜索路径**包含** profiles/web/node_modules，
+# 所以只要包在那个目录里（link 依赖会建）解析就能成功。
+#
+# ⚠️ 槽位提醒：本插件的客户端注册在 `conversation.input.activity` —— 那是 **single** 槽位，
+#    全机只能有一个插件占用（目前就是本插件）。别的插件要加入口请用列表槽位
+#    （conversation.input.right / .left / .dock / composer.dock）。
+#
+# 本行的 id 必须与用户 patch 层里覆盖项的 id 一致，否则插件页的开关改不到它。
+#
+# config.workspace 是本包工作区定位的【第一优先级】（index.js 的 resolveWorkspace）：
+#   config.workspace → 环境变量 DSH_TABLE_IMAGE_WORKSPACE → 与 index.js 同目录的 workspace.txt。
+# 三条全不通时插件激活会直接抛错（启动时报 "1 entry did not activate"）。
+# ⚠️ 换电脑 / 换目录时改下面这一行。工作区里只有这一份 cordis.patch.yml：
+#   DSH 通过 profiles/web/node_modules 里指向本目录的 junction 直接读它。
 
 - insert:
     - id: table-image

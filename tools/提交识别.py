@@ -230,6 +230,54 @@ NAME_ALIASES = {
 }
 
 
+def _净(s):
+    """对账用：去掉空白和常见分隔符，只比内容。"""
+    return re.sub(r"[\s\u3000、,，;；/／]+", "", ve.to_display(s) or "")
+
+
+def load_confusables(base):
+    """读 对照表.json 里的易错对。读不到就返回空 —— 对照表是提效用的，坏了不能挡住主流程。"""
+    try:
+        with open(os.path.join(base, "对照表.json"), encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception:
+        return []
+    out = []
+    for it in (data.get("易错对") or []):
+        if not isinstance(it, dict):
+            continue
+        a, b = ve.to_display(it.get("甲")), ve.to_display(it.get("乙"))
+        if a and b:
+            out.append((a, b, ve.to_display(it.get("说明"))))
+    return out
+
+
+def confusable_hits(rows):
+    """这一批行里，哪些地方踩到了易错对。只报出来，绝不自动改 —— 自动改就是猜。"""
+    pairs = load_confusables(BASE)
+    if not pairs:
+        return []
+    hits, seen = [], set()
+    for r in rows:
+        for k, v in (r.get("fields") or {}).items():
+            s = ve.to_display(v)
+            if not s:
+                continue
+            for a, b, note in pairs:
+                for 中, 另 in ((a, b), (b, a)):
+                    if 中 in s and (中, 另, k) not in seen:
+                        seen.add((中, 另, k))
+                        hits.append((中, 另, note, k))
+        for c in (r.get("components") or []):
+            n = ve.to_display(c.get("name"))
+            for a, b, note in pairs:
+                for 中, 另 in ((a, b), (b, a)):
+                    if n == 中 and (中, 另, "计量项") not in seen:
+                        seen.add((中, 另, "计量项"))
+                        hits.append((中, 另, note, "计量项"))
+    return hits
+
+
 def suggest_name(sch, date_text, sheet_label, fields, seq):
     """按契约里的 `archive.name_pattern` 算归档文件名。
 
@@ -356,6 +404,42 @@ def validate_fragment(frag, image_id, manifest_item, schemas, known_image_ids):
                     "数值读不清就写进 uncertain，**不要猜一个数**。"
                     % (tag, ve.to_display(c.get("name")), raw_v))
 
+        # ---- 「拆开」：把一格里混排的文字切成一段段，每段带原文 ----
+        #   规矩：所有「原文段」按顺序拼起来，必须等于那一格的原文。
+        #   这是全流程里唯一能证明"AI 没丢字、没造字"的地方 —— 拼不上就当场退回。
+        _sp = row.get("拆开")
+        if _sp is not None:
+            if not isinstance(_sp, dict):
+                errors.append("%s 的 拆开 不是对象（应为 {列名: [片段, ...]}）" % tag)
+            else:
+                for _col, _pieces in _sp.items():
+                    _col = ve.to_display(_col)
+                    if _col not in fields:
+                        errors.append("%s 的 拆开 里有列 %r，但 fields 里没有这一列" % (tag, _col))
+                        continue
+                    if not isinstance(_pieces, list) or not _pieces:
+                        errors.append("%s 的 拆开[%s] 不是非空数组" % (tag, _col))
+                        continue
+                    _bad = False
+                    for _p in _pieces:
+                        if not isinstance(_p, dict) or not ve.to_display(_p.get("原文段")):
+                            errors.append(
+                                "%s 的 拆开[%s] 里有一段没写「原文段」。"
+                                "每一段都必须带原文，否则没法核对。" % (tag, _col))
+                            _bad = True
+                            break
+                    if _bad:
+                        continue
+                    _拼 = "".join(ve.to_display(_p.get("原文段")) for _p in _pieces)
+                    if _净(_拼) != _净(fields.get(_col)):
+                        errors.append(
+                            "%s 的 拆开[%s] 拼不回原文：\n"
+                            "          原文　：%s\n"
+                            "          拼接后：%s\n"
+                            "        每段的「原文段」按顺序拼起来必须等于原文，"
+                            "一个字不能多、不能少（空白和顿号逗号分号斜杠不算）。"
+                            % (tag, _col, ve.to_display(fields.get(_col)), _拼))
+
         unc = row.get("uncertain") or []
         if not isinstance(unc, list):
             errors.append("%s 的 uncertain 不是数组" % tag)
@@ -404,6 +488,33 @@ def normalize_rows(frag, image_id, manifest_item, schemas, next_row_no):
                 "unit": ve.to_display(c.get("unit")) or unit,
             })
 
+        # 拆开：原样留档（含「原文段」和没有数值的「说明」），
+        # 同时把有名有值的镜像进 components，下游（成分事实、长表）不用改就能吃到。
+        split_out = None
+        _sp = row.get("拆开")
+        if isinstance(_sp, dict):
+            split_out = {}
+            for _col, _pieces in _sp.items():
+                _col = ve.to_display(_col)
+                _norm = []
+                for _p in _pieces or []:
+                    _nm = ve.to_display(_p.get("名字"))
+                    _rv = ve.to_display(_p.get("值"))
+                    _seg = ve.to_display(_p.get("原文段"))
+                    _norm.append({"名字": _nm, "值": _rv, "原文段": _seg})
+                    # 只有"带 % 的值"才镜像成计量项。
+                    # PH=6.9 这种不是百分数的，进了计量项会被裁判当百分数加进合计，
+                    # 凭空报"合计超过 100%"的假告警 —— 它照样留在 拆开 里，只是不参与合计。
+                    if _nm and _rv and ("%" in _rv or "％" in _rv) \
+                            and ve.parse_percent(_rv) is not None:
+                        comps.append({
+                            "name": _nm,
+                            "raw_value": _rv,
+                            "value": ve.percent_to_decimal_text(_rv),
+                            "unit": unit,
+                        })
+                split_out[_col] = _norm
+
         unc = []
         for u in (row.get("uncertain") or []):
             cands = u.get("candidates") or []
@@ -425,6 +536,7 @@ def normalize_rows(frag, image_id, manifest_item, schemas, next_row_no):
             "fields": fields,
             "components": comps,
             "uncertain": unc,
+            "拆开": split_out,
         }
         out.append(new_row)
         next_row_no += 1
@@ -541,6 +653,19 @@ def cmd_submit(run_dir, manifest, raw, schemas, image_id, frag, replace):
                  for r in new_rows for c in r["components"] if c["raw_value"]]
     if comp_conv:
         print("     换算示例：" + "；".join("%s %s -> %s" % t for t in comp_conv[:4]))
+
+    # 对照表：这张图上有没有踩到"易错对"里记着的词？
+    #   **只提示、不自动改** —— 自动改就是猜，与红线冲突。照录，请人在复核时拍板。
+    hits = confusable_hits(new_rows)
+    if hits:
+        print()
+        print("  ⚠ 对照表提醒：出现了易错词（已照录，**没有自动改**，请复核时确认）：")
+        for 中, 另, 说明, 在哪 in hits[:8]:
+            print("      · %s 里读到「%s」，对照表记着它和「%s」容易互串  %s"
+                  % (在哪, 中, 另, ("—— " + 说明) if 说明 else ""))
+        if len(hits) > 8:
+            print("      …… 还有 %d 处" % (len(hits) - 8))
+        print("      想补/改对照表：python tools/对照表.py")
 
     # 当场把裁判的判定结果报出来（同一套规则）
     issues = referee_feedback(raw, BASE)

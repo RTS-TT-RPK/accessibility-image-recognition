@@ -1,0 +1,550 @@
+{
+ "run_id": "20261011_002",
+ "issues": [
+  {
+   "issue_id": "ISS-OCR-R013-中温",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试1",
+   "sheet": "6#塔岗位记录表",
+   "target_ids": [
+    "R013"
+   ],
+   "object": "8:00",
+   "field": "中温",
+   "description": "看不清或无法确定：中温",
+   "candidates": [
+    "92.3",
+    "102.3"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R014-中温",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试1",
+   "sheet": "6#塔岗位记录表",
+   "target_ids": [
+    "R014"
+   ],
+   "object": "9:00",
+   "field": "中温",
+   "description": "看不清或无法确定：中温",
+   "candidates": [
+    "93.9",
+    "103.9"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R016-中温",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试1",
+   "sheet": "6#塔岗位记录表",
+   "target_ids": [
+    "R016"
+   ],
+   "object": "11:00",
+   "field": "中温",
+   "description": "看不清或无法确定：中温",
+   "candidates": [
+    "106.6",
+    "108.6"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R019-釜温",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试1",
+   "sheet": "6#塔岗位记录表",
+   "target_ids": [
+    "R019"
+   ],
+   "object": "14:00",
+   "field": "釜温",
+   "description": "看不清或无法确定：釜温",
+   "candidates": [
+    "108.4",
+    "105.4"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R039-小桶货方箱编号",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试2",
+   "sheet": "高栏来料作业单",
+   "target_ids": [
+    "R039"
+   ],
+   "object": "2甲苯 第2行",
+   "field": "小桶货方箱编号",
+   "description": "看不清或无法确定：小桶货方箱编号",
+   "candidates": [
+    "69",
+    "68"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R039-化验结果",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试2",
+   "sheet": "高栏来料作业单",
+   "target_ids": [
+    "R039"
+   ],
+   "object": "2甲苯 第2行",
+   "field": "化验结果",
+   "description": "看不清或无法确定：化验结果",
+   "candidates": [
+    "加水调PH=24",
+    "水23.4% PH=24"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R041-化验结果",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试2",
+   "sheet": "高栏来料作业单",
+   "target_ids": [
+    "R041"
+   ],
+   "object": "异-甲 第4行",
+   "field": "化验结果",
+   "description": "看不清或无法确定：化验结果",
+   "candidates": [
+    "异87%",
+    "异8%"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R042-物料名称",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试2",
+   "sheet": "高栏来料作业单",
+   "target_ids": [
+    "R042"
+   ],
+   "object": "二氯甲烷 第5行",
+   "field": "物料名称",
+   "description": "看不清或无法确定：物料名称",
+   "candidates": [
+    "二氯甲烷"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R045-原料贮存位置",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试3",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R045"
+   ],
+   "object": "X2#",
+   "field": "原料贮存位置",
+   "description": "看不清或无法确定：原料贮存位置",
+   "candidates": [
+    "现场+膜脱",
+    "现场+膜成"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R049-数量",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试3",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R049"
+   ],
+   "object": "5#",
+   "field": "数量",
+   "description": "看不清或无法确定：数量",
+   "candidates": [
+    "约8+5箱",
+    "约8.5箱"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R051-原料名称",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试3",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R051"
+   ],
+   "object": "2#",
+   "field": "原料名称",
+   "description": "看不清或无法确定：原料名称",
+   "candidates": [
+    "高水乙醇"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R053-塔号",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试3",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R053"
+   ],
+   "object": "膜",
+   "field": "塔号",
+   "description": "看不清或无法确定：塔号",
+   "candidates": [
+    "膜"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R054-乳化情况",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试6",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R054"
+   ],
+   "object": "瑞博 6863 C-26-09-094",
+   "field": "乳化情况",
+   "description": "看不清或无法确定：乳化情况",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R056-乳化情况",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试6",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R056"
+   ],
+   "object": "药业(63378) C-26-09-096",
+   "field": "乳化情况",
+   "description": "看不清或无法确定：乳化情况",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R058-PH值",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试6",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R058"
+   ],
+   "object": "2腈",
+   "field": "PH值",
+   "description": "看不清或无法确定：PH值",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R058-乳化情况",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试6",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R058"
+   ],
+   "object": "2腈",
+   "field": "乳化情况",
+   "description": "看不清或无法确定：乳化情况",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R065-外观",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试5",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R065"
+   ],
+   "object": "诺泰(7386) C-26-10-00",
+   "field": "外观",
+   "description": "看不清或无法确定：外观",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R079-原料贮存位置",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试4",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R079"
+   ],
+   "object": "9#",
+   "field": "原料贮存位置",
+   "description": "看不清或无法确定：原料贮存位置",
+   "candidates": [
+    "车间9#+罐",
+    "车间9#+糊"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-OCR-R084-原料名称",
+   "run_id": "20261011_002",
+   "type": "OCR_UNCERTAIN",
+   "severity": "warn",
+   "image": "测试4",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R084"
+   ],
+   "object": "6#",
+   "field": "原料名称",
+   "description": "看不清或无法确定：原料名称",
+   "candidates": [
+    "噻嗪丙酮",
+    "喹嗪丙酮"
+   ],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-6#塔岗位记录表",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "6#塔岗位记录表",
+   "target_ids": [
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034",
+    "R035",
+    "R036",
+    "R037"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「6#塔岗位记录表」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-分析检验原始记录",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "分析检验原始记录",
+   "target_ids": [
+    "R054",
+    "R055",
+    "R056",
+    "R057",
+    "R058",
+    "R059",
+    "R060",
+    "R061",
+    "R062",
+    "R063",
+    "R064",
+    "R065",
+    "R066",
+    "R067",
+    "R068",
+    "R069",
+    "R070",
+    "R071"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「分析检验原始记录」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-库存明细",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "库存明细",
+   "target_ids": [
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R012"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「库存明细」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-物料总表",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "物料总表",
+   "target_ids": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「物料总表」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-进料记录",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "进料记录",
+   "target_ids": [
+    "R043",
+    "R044",
+    "R045",
+    "R046",
+    "R047",
+    "R048",
+    "R049",
+    "R050",
+    "R051",
+    "R052",
+    "R053",
+    "R072",
+    "R073",
+    "R074",
+    "R075",
+    "R076",
+    "R077",
+    "R078",
+    "R079",
+    "R080",
+    "R081",
+    "R082",
+    "R083",
+    "R084",
+    "R085",
+    "R086"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「进料记录」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  },
+  {
+   "issue_id": "ISS-SHEET-高栏来料作业单",
+   "run_id": "20261011_002",
+   "type": "SHEET_UNKNOWN",
+   "severity": "info",
+   "image": "",
+   "sheet": "高栏来料作业单",
+   "target_ids": [
+    "R038",
+    "R039",
+    "R040",
+    "R041",
+    "R042"
+   ],
+   "object": "",
+   "field": "sheet",
+   "description": "表名「高栏来料作业单」不在已注册契约里（已注册：库存日报、来料分析），本组按通用口径校验；若这是新表型，请做样板并注册契约",
+   "candidates": [],
+   "machine_status": "pending",
+   "human_decision": null
+  }
+ ],
+ "resolved_count": 0
+}

@@ -1,0 +1,76 @@
+{
+  "image_id": "G5_化验单_两级表头",
+  "sheet_label": "化验报告单",
+  "date_text": "2026-10-11",
+  "rows": [
+    {
+      "row_role": "header",
+      "object_label": "化验报告单",
+      "fields": {
+        "样品编号": "LA-20261011-03",
+        "收样日期": "2026-10-11"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "外观",
+      "fields": {
+        "序号": "1",
+        "检测项目": "外观",
+        "检测结果-数值": "无色透明",
+        "检测结果-单位": "—",
+        "结论": "合格"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "水分",
+      "fields": {
+        "序号": "2",
+        "检测项目": "水分",
+        "检测结果-数值": "0.27",
+        "检测结果-单位": "%",
+        "结论": "合格"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "纯度",
+      "fields": {
+        "序号": "3",
+        "检测项目": "纯度",
+        "检测结果-数值": "99.84",
+        "检测结果-单位": "%",
+        "结论": "合格"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "PH",
+      "fields": {
+        "序号": "4",
+        "检测项目": "PH",
+        "检测结果-数值": "6.9",
+        "检测结果-单位": "—",
+        "结论": "合格"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "note",
+      "object_label": "检测：化验室  审核：张工",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    }
+  ]
+}

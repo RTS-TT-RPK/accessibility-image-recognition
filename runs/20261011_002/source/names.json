@@ -1,0 +1,63 @@
+{
+ "_说明": "本任务的图片台账：编号 ↔ 原文件名 ↔ 指纹。由 tools/建任务.py 生成。",
+ "run_id": "20261011_002",
+ "created": "2026-10-11 22:12:35",
+ "images": [
+  {
+   "image_id": "测试1",
+   "original_name": "测试1.jpg",
+   "file": "runs/20261011_002/source/测试1.jpg",
+   "sha256": "5b9940879bd4f40b35ded4cd05954771110140c39af40063bbf87af462086a0d",
+   "bytes": 554241
+  },
+  {
+   "image_id": "测试2",
+   "original_name": "测试2.jpg",
+   "file": "runs/20261011_002/source/测试2.jpg",
+   "sha256": "889759aeeb6efd9cd628804e23fd685cfb762288ebcb87522c75b3ca21b919c1",
+   "bytes": 696461
+  },
+  {
+   "image_id": "测试3",
+   "original_name": "测试3.jpg",
+   "file": "runs/20261011_002/source/测试3.jpg",
+   "sha256": "b8f40b887e21459f7c53aaee5983715558aa2e6b8f2fb788ac80ecd1e9b1b7fe",
+   "bytes": 604841
+  },
+  {
+   "image_id": "测试4",
+   "original_name": "测试4.jpg",
+   "file": "runs/20261011_002/source/测试4.jpg",
+   "sha256": "d7f0993b577b6d7cbd4474c529a004be47928bd5cd45b1a4b1e87937c983a946",
+   "bytes": 722376
+  },
+  {
+   "image_id": "测试5",
+   "original_name": "测试5.jpg",
+   "file": "runs/20261011_002/source/测试5.jpg",
+   "sha256": "2f1bd2a080db2ac5686cfb79731b66ff25b5c85da205a6cff9be93700253df43",
+   "bytes": 387989
+  },
+  {
+   "image_id": "测试6",
+   "original_name": "测试6.jpg",
+   "file": "runs/20261011_002/source/测试6.jpg",
+   "sha256": "3619add76655d3ebf7712b1e7a524843e1dbdb79b0f4f7c5567cee1c49f2092a",
+   "bytes": 574705
+  },
+  {
+   "image_id": "测试7",
+   "original_name": "测试7.png",
+   "file": "runs/20261011_002/source/测试7.png",
+   "sha256": "507e7b2eb8130ab5d159db5817b2ce32c9c44bddf624fed55f4d23baa937990a",
+   "bytes": 95799
+  },
+  {
+   "image_id": "测试8",
+   "original_name": "测试8.png",
+   "file": "runs/20261011_002/source/测试8.png",
+   "sha256": "639d4d51974940f40057b7c50002b95e6961d86b7c3225c29f8e61556e167a49",
+   "bytes": 327662
+  }
+ ]
+}

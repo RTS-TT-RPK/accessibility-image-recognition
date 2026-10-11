@@ -1,0 +1,73 @@
+{
+  "image_id": "G3_温度记录_英文",
+  "sheet_label": "TEMPERATURE & HUMIDITY LOG",
+  "date_text": "",
+  "rows": [
+    {
+      "row_role": "note",
+      "object_label": "Area: Warehouse B    Sheet 1 of 1",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "WANG JG",
+      "fields": {
+        "Date": "2026-10-11",
+        "Time": "08:00",
+        "Temp(C)": "22.4",
+        "Humidity(%)": "55",
+        "Operator": "WANG JG"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "LI XL",
+      "fields": {
+        "Date": "2026-10-11",
+        "Time": "12:00",
+        "Temp(C)": "24.1",
+        "Humidity(%)": "51",
+        "Operator": "LI XL"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "LI XL",
+      "fields": {
+        "Date": "2026-10-11",
+        "Time": "16:00",
+        "Temp(C)": "23.7",
+        "Humidity(%)": "53",
+        "Operator": "LI XL"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "ZHAO DY",
+      "fields": {
+        "Date": "2026-10-11",
+        "Time": "20:00",
+        "Temp(C)": "21.9",
+        "Humidity(%)": "58",
+        "Operator": "ZHAO DY"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "note",
+      "object_label": "Recorder: QC Lab    Checked by: ZHANG",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    }
+  ]
+}

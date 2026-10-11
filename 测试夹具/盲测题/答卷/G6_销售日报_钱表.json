@@ -1,0 +1,72 @@
+{
+  "image_id": "G6_销售日报_钱表",
+  "sheet_label": "销售日报",
+  "date_text": "2026-10-11",
+  "rows": [
+    {
+      "row_role": "header",
+      "object_label": "销售日报",
+      "fields": {
+        "日期": "2026-10-11",
+        "单位": "元"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "IPAC",
+      "fields": {
+        "品类": "IPAC",
+        "数量(件)": "120",
+        "单价(元)": "3,850.00",
+        "金额(元)": "462,000.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "DMF",
+      "fields": {
+        "品类": "DMF",
+        "数量(件)": "80",
+        "单价(元)": "4,120.00",
+        "金额(元)": "329,600.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "甲醇",
+      "fields": {
+        "品类": "甲醇",
+        "数量(件)": "300",
+        "单价(元)": "1,640.00",
+        "金额(元)": "492,000.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "summary",
+      "object_label": "合计",
+      "fields": {
+        "品类": "合计",
+        "数量(件)": "500",
+        "单价(元)": "—",
+        "金额(元)": "1,283,600.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "note",
+      "object_label": "制表：销售部",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    }
+  ]
+}

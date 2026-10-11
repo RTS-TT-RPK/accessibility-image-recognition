@@ -1,0 +1,73 @@
+{
+  "image_id": "G2_考勤表",
+  "sheet_label": "车间考勤表",
+  "date_text": "2026-10-11 至 2026-10-12",
+  "rows": [
+    {
+      "row_role": "note",
+      "object_label": "班组：二班",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "王建国",
+      "fields": {
+        "日期": "2026-10-11",
+        "姓名": "王建国",
+        "班次": "白班",
+        "工时(小时)": "8",
+        "加班(小时)": "2"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "李秀兰",
+      "fields": {
+        "日期": "2026-10-11",
+        "姓名": "李秀兰",
+        "班次": "白班",
+        "工时(小时)": "8",
+        "加班(小时)": "0"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "赵大勇",
+      "fields": {
+        "日期": "2026-10-11",
+        "姓名": "赵大勇",
+        "班次": "夜班",
+        "工时(小时)": "6",
+        "加班(小时)": "1.5"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "王建国",
+      "fields": {
+        "日期": "2026-10-12",
+        "姓名": "王建国",
+        "班次": "白班",
+        "工时(小时)": "8",
+        "加班(小时)": "0"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "note",
+      "object_label": "制表：人事科",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    }
+  ]
+}

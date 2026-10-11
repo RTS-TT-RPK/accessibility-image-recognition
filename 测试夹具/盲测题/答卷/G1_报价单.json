@@ -1,0 +1,83 @@
+{
+  "image_id": "G1_报价单",
+  "sheet_label": "报价单",
+  "date_text": "2026-10-11",
+  "rows": [
+    {
+      "row_role": "note",
+      "object_label": "致：华东化工股份有限公司",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "IPAC",
+      "fields": {
+        "序号": "1",
+        "品名": "IPAC",
+        "规格": "工业级 200L",
+        "数量": "12",
+        "单价(元)": "3,850.00",
+        "金额(元)": "46,200.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "data",
+      "object_label": "DMF",
+      "fields": {
+        "序号": "2",
+        "品名": "DMF",
+        "规格": "工业级 200L",
+        "数量": "8",
+        "单价(元)": "4,120.00",
+        "金额(元)": ""
+      },
+      "components": [],
+      "uncertain": [
+        {
+          "field": "金额(元)",
+          "candidates": [],
+          "note": "该格被模糊/涂抹遮挡，无任何可辨认数字，图上读不出，未猜值"
+        }
+      ]
+    },
+    {
+      "row_role": "data",
+      "object_label": "甲醇",
+      "fields": {
+        "序号": "3",
+        "品名": "甲醇",
+        "规格": "工业级 槽车",
+        "数量": "30",
+        "单价(元)": "1,640.00",
+        "金额(元)": "49,200.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "summary",
+      "object_label": "合计",
+      "fields": {
+        "序号": "合计",
+        "品名": "—",
+        "规格": "—",
+        "数量": "50",
+        "单价(元)": "—",
+        "金额(元)": "128,360.00"
+      },
+      "components": [],
+      "uncertain": []
+    },
+    {
+      "row_role": "note",
+      "object_label": "报价有效期 30 天，含税不含运费。",
+      "fields": {},
+      "components": [],
+      "uncertain": []
+    }
+  ]
+}

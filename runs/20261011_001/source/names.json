@@ -1,0 +1,49 @@
+{
+ "_说明": "本任务的图片台账：编号 ↔ 原文件名 ↔ 指纹。由 tools/建任务.py 生成。",
+ "run_id": "20261011_001",
+ "created": "2026-10-11 20:53:28",
+ "images": [
+  {
+   "image_id": "A1_物料总表_电子",
+   "original_name": "A1_物料总表_电子.jpg",
+   "file": "runs/20261011_001/source/A1_物料总表_电子.jpg",
+   "sha256": "dc86ee1350232e1199579c82fa6af54f0c5bdff52d20fd3aa7b6c7ed955062d4",
+   "bytes": 758181
+  },
+  {
+   "image_id": "A2_库存明细_电子",
+   "original_name": "A2_库存明细_电子.png",
+   "file": "runs/20261011_001/source/A2_库存明细_电子.png",
+   "sha256": "8c5a24891b3bf15895be7a68a69e6c6f726d8283865e2d279e30b41e226b16a8",
+   "bytes": 310870
+  },
+  {
+   "image_id": "A3_高栏来料单_1011",
+   "original_name": "A3_高栏来料单_1011.jpg",
+   "file": "runs/20261011_001/source/A3_高栏来料单_1011.jpg",
+   "sha256": "889759aeeb6efd9cd628804e23fd685cfb762288ebcb87522c75b3ca21b919c1",
+   "bytes": 696461
+  },
+  {
+   "image_id": "A4_手写进料记录_01",
+   "original_name": "A4_手写进料记录_01.jpg",
+   "file": "runs/20261011_001/source/A4_手写进料记录_01.jpg",
+   "sha256": "c1dea0c2c5518f97cc0d2d482f98fd6b7a6b8f6922d3e5cedd3c6dede3b67f4c",
+   "bytes": 694358
+  },
+  {
+   "image_id": "A5_手写进料记录_02",
+   "original_name": "A5_手写进料记录_02.jpg",
+   "file": "runs/20261011_001/source/A5_手写进料记录_02.jpg",
+   "sha256": "c5547df7a358bbc6759920c6d36cea3559d6dcd8db0a0c1ce6986528c1ed761e",
+   "bytes": 607381
+  },
+  {
+   "image_id": "A6_高栏来料单_1001",
+   "original_name": "A6_高栏来料单_1001.jpg",
+   "file": "runs/20261011_001/source/A6_高栏来料单_1001.jpg",
+   "sha256": "160f040d1f14cf5f0e23e1a7ff5b2e4690b45e08bdfb852884199ea1a51284eb",
+   "bytes": 778690
+  }
+ ]
+}
