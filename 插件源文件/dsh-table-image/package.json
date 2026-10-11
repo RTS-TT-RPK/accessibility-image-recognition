@@ -1,8 +1,8 @@
 {
   "name": "dsh-table-image",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "表格图片转录：宿主侧注册 table_image_* 工具（薄壳，全部转调工作区里的 Python 脚本），客户端提供一个按钮 + 状态面板 + 拖拽收图。",
+  "description": "表格图片转录：宿主侧注册 table_image_* 工具（薄壳，全部转调工作区里的 Python 脚本），客户端提供一个按钮 + 状态面板 + 拖拽收图。V0.2.0 配合工作区 V3.1：拆开对账、对照表、子代理并行 + 防卡死。",
   "type": "module",
   "main": "./index.js",
   "exports": {
